@@ -17,6 +17,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 document.getElementById('showTrending')?.addEventListener('click', () => {
 	getTrendingAll().then(trending => {
 		const results: Result[] = trending.results;
+
 		results.forEach((result: Result) => {
 			const card = document.createElement('div');
 			card.classList.add('card-image');
